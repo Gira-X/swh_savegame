@@ -1435,7 +1435,7 @@ if __name__ == '__main__':
                     hatlist += sg.full_hats[dlcnum]
             hats_added = 0
             for hatname in hatlist:
-                if hatname not in sg.seen_hats:
+                if hatname not in sg.seen_hats and hatname != b'petit_top_hat':
                     sg.add_hat(hatname)
                     hats_added += 1
             print('Added {} hats ({} already present)'.format(hats_added, len(hatlist)-hats_added))
